@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Modern SaaS Homepage</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<style>
+:root{
+    --primary:#6366f1;
+    --secondary:#22c55e;
+    --dark:#0f172a;
+    --light:#f8fafc;
+    --gray:#64748b;
+}
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family: 'Segoe UI', sans-serif;
+}
+
+body{
+    background:var(--light);
+    color:var(--dark);
+}
+
+/* NAVBAR */
+header{
+    padding:20px 8%;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+}
+
+.logo{
+    font-size:24px;
+    font-weight:700;
+    color:var(--primary);
+}
+
+nav a{
+    margin:0 15px;
+    text-decoration:none;
+    color:var(--gray);
+    font-weight:500;
+}
+
+nav a:hover{
+    color:var(--primary);
+}
+
+.btn{
+    background:var(--primary);
+    color:#fff;
+    padding:10px 18px;
+    border-radius:8px;
+    text-decoration:none;
+    font-weight:600;
+}
+
+/* HERO */
+.hero{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:50px;
+    padding:80px 8%;
+    align-items:center;
+}
+
+.hero h1{
+    font-size:48px;
+    margin-bottom:20px;
+}
+
+.hero p{
+    color:var(--gray);
+    font-size:18px;
+    margin-bottom:30px;
+}
+
+.hero-buttons a{
+    margin-right:15px;
+}
+
+.hero-image{
+    background:linear-gradient(135deg,var(--primary),var(--secondary));
+    height:380px;
+    border-radius:24px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    color:#fff;
+    font-size:22px;
+    font-weight:600;
+}
+
+/* FEATURES */
+.features{
+    padding:80px 8%;
+    text-align:center;
+}
+
+.features h2{
+    font-size:36px;
+    margin-bottom:15px;
+}
+
+.features p{
+    color:var(--gray);
+    margin-bottom:50px;
+}
+
+.feature-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+    gap:30px;
+}
+
+.feature-card{
+    background:#fff;
+    padding:30px;
+    border-radius:20px;
+    box-shadow:0 10px 25px rgba(0,0,0,0.06);
+    transition:0.3s;
+}
+
+.feature-card:hover{
+    transform:translateY(-8px);
+}
+
+.feature-card h3{
+    margin-bottom:10px;
+}
+
+/* PRICING */
+.pricing{
+    padding:80px 8%;
+    background:#eef2ff;
+    text-align:center;
+}
+
+.pricing h2{
+    font-size:36px;
+    margin-bottom:40px;
+}
+
+.pricing-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+    gap:30px;
+}
+
+.price-card{
+    background:#fff;
+    padding:40px;
+    border-radius:20px;
+    box-shadow:0 10px 25px rgba(0,0,0,0.06);
+}
+
+.price{
+    font-size:36px;
+    color:var(--primary);
+    margin:20px 0;
+}
+
+/* CTA */
+.cta{
+    padding:80px 8%;
+    background:linear-gradient(135deg,var(--primary),var(--secondary));
+    color:#fff;
+    text-align:center;
+}
+
+.cta h2{
+    font-size:40px;
+    margin-bottom:20px;
+}
+
+.cta a{
+    background:#fff;
+    color:var(--primary);
+    padding:14px 28px;
+    border-radius:10px;
+    font-weight:600;
+    text-decoration:none;
+}
+
+/* FOOTER */
+footer{
+    padding:30px 8%;
+    text-align:center;
+    color:var(--gray);
+}
+
+/* RESPONSIVE */
+@media(max-width:900px){
+    .hero{
+        grid-template-columns:1fr;
+        text-align:center;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<header>
+    <div class="logo">SaaSify</div>
+    <nav>
+        <a href="#">Features</a>
+        <a href="#">Pricing</a>
+        <a href="#">About</a>
+        <a class="btn" href="#">Get Started</a>
+    </nav>
+</header>
+
+<section class="hero">
+    <div>
+        <h1>Build, Scale & Manage Your SaaS Faster</h1>
+        <p>All-in-one platform to manage customers, analytics, and growth. Trusted by modern startups worldwide.</p>
+        <div class="hero-buttons">
+            <a class="btn" href="#">Start Free Trial</a>
+            <a href="#">View Demo</a>
+        </div>
+    </div>
+    <div class="hero-image">
+    <img src="dash.png" alt="Product Dashboard Preview">
+</div>
+
+</section>
+
+<section class="features">
+    <h2>Powerful Features</h2>
+    <p>Everything you need to run a successful SaaS business</p>
+
+    <div class="feature-grid">
+        <div class="feature-card">
+            <h3>Analytics</h3>
+            <p>Track users, revenue, and performance in real time.</p>
+        </div>
+        <div class="feature-card">
+            <h3>Automation</h3>
+            <p>Automate workflows and reduce manual work.</p>
+        </div>
+        <div class="feature-card">
+            <h3>Security</h3>
+            <p>Enterprise-grade security for peace of mind.</p>
+        </div>
+    </div>
+</section>
+
+<section class="pricing">
+    <h2>Simple Pricing</h2>
+
+    <div class="pricing-grid">
+        <div class="price-card">
+            <h3>Starter</h3>
+            <div class="price">$19/mo</div>
+            <p>Best for small teams</p>
+            <br>
+            <a class="btn" href="#">Choose Plan</a>
+        </div>
+        <div class="price-card">
+            <h3>Pro</h3>
+            <div class="price">$49/mo</div>
+            <p>For growing startups</p>
+            <br>
+            <a class="btn" href="#">Choose Plan</a>
+        </div>
+        <div class="price-card">
+            <h3>Enterprise</h3>
+            <div class="price">Custom</div>
+            <p>Large organizations</p>
+            <br>
+            <a class="btn" href="#">Contact Us</a>
+        </div>
+    </div>
+</section>
+
+<section class="cta">
+    <h2>Start Growing Your SaaS Today</h2>
+    <p>Join thousands of teams already scaling faster</p>
+    <br>
+    <a href="#">Get Started Free</a>
+</section>
+
+<footer>
+    © 2025 SaaSify. All rights reserved.
+</footer>
+
+</body>
+</html>
